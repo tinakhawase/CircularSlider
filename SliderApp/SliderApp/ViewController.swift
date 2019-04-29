@@ -13,8 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let button = UIButton(type: UIButton.ButtonType.infoDark)
+        button.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
     }
-
+    
+    @objc func buttonClicked(sender: AnyObject)  {
+        print("button pressed")
+    }
 
 }
 
